@@ -29,3 +29,8 @@ hadoop fs -cat /demo1/part-m-0000
 or 
 hadoop fs -cat /demo1/part-m-0001
 ```
+
+### Export data from linux to mysql
+```
+sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com/cdb21dw011 --username cdb22dw011 -P --table karthick --export-dir /StudentData1/part*
+```
