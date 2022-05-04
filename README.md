@@ -1,5 +1,9 @@
 # Sqoop
 
+# passwrd
+```
+Welcome!12345
+```
 # load file from mysql to vm hdfs
 -m 1 for primary key
 ```
