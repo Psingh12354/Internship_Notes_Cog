@@ -89,3 +89,8 @@ hdfs dfs -put /home/ubh01/customer.txt /input
 ```
 sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com/test --username cdb22dw011 -P --table customer --update-key cust_id --update-mode allowinsert --export-dir /input/customer.txt
 ```
+### Alter table to remove first col and make datatype non null in hive
+```
+ALTER TABLE tablename
+SET TBLPROPERTIES ("skip.header.line.count"="1");
+```
