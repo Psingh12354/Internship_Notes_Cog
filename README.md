@@ -64,3 +64,28 @@ hdfs dfs -rm -r /user/ubh01/customer
 ```
 sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com/test --username cdb22dw011 -P --table customer --hive-import
 ```
+
+### Some more work
+```
+hdfs dfs -ls /customer
+```
+### Get
+```
+hdfs dfs -get /customer/part* /home/ubh01
+```
+### Tranfer
+```
+cat part* > customer.txt
+```
+###  mkdir
+```
+hdfs dfs -mkdir /input
+```
+### put
+```
+hdfs dfs -put /home/ubh01/customer.txt /input
+```
+### export
+```
+sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com/test --username cdb22dw011 -P --table customer --update-key cust_id --update-mode allowinsert --export-dir /input/customer.txt
+```
