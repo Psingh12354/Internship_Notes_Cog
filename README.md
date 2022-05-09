@@ -138,3 +138,8 @@ hive> load data inpath '/karthick/StudentData.csv' overwrite into table karthick
 hive> load data local inpath '/home/ubh01/Desktop/StudentData.csv' overwrite into table karthick;
 ============================
 ```
+
+### Partiton two type static and 
+```
+insert into table dummy select * from karthick;
+```
