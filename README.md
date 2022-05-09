@@ -99,3 +99,8 @@ SET TBLPROPERTIES ("skip.header.line.count"="1");
 create table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
 
 ```
+### load in hive
+```
+hive> load data inpath '/StudentData1' overwrite into table priyanshu;
+
+```
