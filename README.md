@@ -94,11 +94,15 @@ sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 ALTER TABLE tablename
 SET TBLPROPERTIES ("skip.header.line.count"="1");
 ```
-### Creat table
+### Creat table internal by default
 ```
 create table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
 
 ```
+### External table
+```
+create external table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
+````
 ### load in hive
 ```
 hive> load data inpath '/StudentData1' overwrite into table priyanshu;
