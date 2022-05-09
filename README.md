@@ -94,3 +94,8 @@ sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 ALTER TABLE tablename
 SET TBLPROPERTIES ("skip.header.line.count"="1");
 ```
+### Creat table
+```
+create table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
+
+```
