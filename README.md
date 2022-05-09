@@ -91,17 +91,17 @@ sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 ```
 ### Alter table to remove first col and make datatype non null in hive
 ```
-ALTER TABLE tablename
+hive> ALTER TABLE tablename
 SET TBLPROPERTIES ("skip.header.line.count"="1");
 ```
 ### Creat table internal by default
 ```
-create table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
+hive>  create table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
 
 ```
 ### External table
 ```
-create external table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
+hive>  create external table priyanshu(age int, gender string,name string,roll int, email string) row format delimited fields terminated by ',' TBLPROPERTIES ("skip.header.line.count"="1"); 
 ````
 ### load in hive
 ```
@@ -110,11 +110,11 @@ hive> load data inpath '/StudentData1' overwrite into table priyanshu;
 ```
 ### count total number of row
 ```
-select count (*) from tablename;
+hive>  select count (*) from tablename;
 ```
 ### Notes shared
 ```
-create table karthick(
+hive> create table karthick(
 age int,
 gender string,
 name string,
@@ -131,10 +131,10 @@ TBLPROPERTIES ("skip.header.line.count"="1");
 ```
 # Load the data from HDFS Location -> move the file from original location to hive architecture local
 #if you drop the data original file is lost
-load data inpath '/karthick/StudentData.csv' overwrite into table karthick;
+hive> load data inpath '/karthick/StudentData.csv' overwrite into table karthick;
 =============================================================================
 #Load from the Local File System
 #Keep the original file from local file system
-load data local inpath '/home/ubh01/Desktop/StudentData.csv' overwrite into table karthick;
+hive> load data local inpath '/home/ubh01/Desktop/StudentData.csv' overwrite into table karthick;
 ============================
 ```
