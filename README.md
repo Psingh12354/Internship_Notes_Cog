@@ -104,3 +104,33 @@ create table priyanshu(age int, gender string,name string,roll int, email string
 hive> load data inpath '/StudentData1' overwrite into table priyanshu;
 
 ```
+### count total number of row
+```
+select count (*) from tablename;
+```
+### Notes shared
+```
+create table karthick(
+age int,
+gender string,
+name string,
+course string,
+roll int,
+marks int,
+email string)
+row format delimited
+fields terminated by ','
+TBLPROPERTIES ("skip.header.line.count"="1");
+=============================================================================
+```
+### Load from hdfs and local system
+```
+# Load the data from HDFS Location -> move the file from original location to hive architecture local
+#if you drop the data original file is lost
+load data inpath '/karthick/StudentData.csv' overwrite into table karthick;
+=============================================================================
+#Load from the Local File System
+#Keep the original file from local file system
+load data local inpath '/home/ubh01/Desktop/StudentData.csv' overwrite into table karthick;
+============================
+```
