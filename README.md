@@ -185,4 +185,15 @@ insert into table dyna_part partition(course) select age,gender,name,roll, marks
 ### Partioning work on only if it has unique data or column while here in bucketing we working with non unique value through hashing 
 ```
 select distinct(age) from priyanshu;
+
+
+create table priyanshu(
+age int,
+gender string,
+name string,
+course string,
+roll int,
+marks int,
+email string) 
+clustered by(age) into 2 buckets stored as textfile;
 ```
