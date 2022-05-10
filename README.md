@@ -187,7 +187,7 @@ insert into table dyna_part partition(course) select age,gender,name,roll, marks
 select distinct(age) from priyanshu;
 
 
-create table priyanshu(
+create table priyanshu_buck(
 age int,
 gender string,
 name string,
