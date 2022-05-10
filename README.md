@@ -207,6 +207,8 @@ marks int,
 email string) 
 clustered by(age) into 2 buckets stored as textfile;
 
+insert into priyanshu_buck select * from priyanshu;
+
 create table priyanshu_buck(
 age int,
 gender string,
