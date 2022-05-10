@@ -162,12 +162,21 @@ hive> insert into table stat_part partition(course = 'DB') select age,gender,nam
 ```
 ### Dynamic partition
 ```
- create table stat_part(
-     age int,
-     gender string,
-     name string, 
-     roll int,
-     marks string,
-     email string
-    )partitioned by (course string);
+
+create table dyna_part(
+age int,
+gender string,
+name string,
+roll int,
+marks string,
+email string
+)partitioned by (course string);
+
+ 
+
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+ 
+
+insert into table dyna_part partition(course) select age,gender,name,roll, marks,email,course from karthick where course = 'DB';
 ```
