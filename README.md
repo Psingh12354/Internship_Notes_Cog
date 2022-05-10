@@ -182,6 +182,14 @@ insert into table dyna_part partition(course) select age,gender,name,roll, marks
 # dynmaic partion does not required column name 
 ```
 
+### After partioning and bucketing to know your work is done quit hive and move to normal shell
+### Location to check
+```
+hadoop fs -cat /user/hive/warehouse/name_table/000000_0 
+hadoop fs -cat /user/hive/warehouse/name_table/000001_0 
+so on
+```
+
 ### Partioning work on only if it has unique data or column while here in bucketing we working with non unique value through hashing 
 ```
 select distinct(age) from priyanshu;
