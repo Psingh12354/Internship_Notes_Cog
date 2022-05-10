@@ -180,6 +180,4 @@ set hive.exec.dynamic.partition.mode=nonstrict;
 
 insert into table dyna_part partition(course) select age,gender,name,roll, marks,email,course from karthick where course = 'DB';
 # dynmaic partion does not required column name 
-
-insert into table dyna_part partition(course) select age,gender,name,roll, marks,email,course from priyanshu where course;
 ```
