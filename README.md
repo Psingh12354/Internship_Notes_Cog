@@ -158,8 +158,16 @@ hive> create table stat_part(
 ### Static partioned
 ```
 
-
- 
-
 hive> insert into table stat_part partition(course = 'DB') select age,gender,name,roll, marks,email from karthick where course = 'DB';
+```
+### Dynamic partition
+```
+ create table stat_part(
+     age int,
+     gender string,
+     name string, 
+     roll int,
+     marks string,
+     email string
+    )partitioned by (course string);
 ```
