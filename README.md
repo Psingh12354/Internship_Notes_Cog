@@ -209,7 +209,7 @@ clustered by(age) into 2 buckets stored as textfile;
 
 insert into priyanshu_buck select * from priyanshu;
 
-create table priyanshu_buck(
+create table priyanshu_buck1(
 age int,
 gender string,
 name string,
