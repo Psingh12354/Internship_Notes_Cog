@@ -114,7 +114,7 @@ hive>  select count (*) from tablename;
 ```
 ### Notes shared
 ```
-hive> create table karthick(
+hive> create table priyanshu(
 age int,
 gender string,
 name string,
@@ -157,14 +157,7 @@ hive> create table stat_part(
 ```
 ### Static partioned
 ```
-hive> create table stat_part(
-      age int,
-      gender string,
-      name string,
-      roll int,
-      marks string,
-      email string
-      )partitioned by (course string);
+
 
  
 
