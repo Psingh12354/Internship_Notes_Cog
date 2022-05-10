@@ -143,3 +143,15 @@ hive> load data local inpath '/home/ubh01/Desktop/StudentData.csv' overwrite int
 ```
 insert into table dummy select * from karthick;
 ```
+
+### Create table by partitioned
+```
+hive> create table stat_part(
+    > age int,
+    > gender string,
+    > name string, 
+    > roll int,
+    > marks string,
+    > email string
+    > )partitioned by (course string);
+```
