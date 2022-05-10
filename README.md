@@ -196,4 +196,24 @@ roll int,
 marks int,
 email string) 
 clustered by(age) into 2 buckets stored as textfile;
+
+create table priyanshu_buck(
+age int,
+gender string,
+name string,
+course string,
+roll int,
+marks int,
+email string) 
+clustered by(age) into 2 buckets stored as textfile;
+
+create table priyanshu_buck(
+age int,
+gender string,
+name string,
+course string,
+roll int,
+marks int,
+email string) 
+clustered by(course) into 6 buckets stored as textfile;
 ```
