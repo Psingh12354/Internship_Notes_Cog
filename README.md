@@ -155,7 +155,7 @@ hive> create table stat_part(
     > email string
     > )partitioned by (course string);
 ```
-### Static partioned
+### Static partioned default
 ```
 
 hive> insert into table stat_part partition(course = 'DB') select age,gender,name,roll, marks,email from karthick where course = 'DB';
