@@ -1,4 +1,4 @@
-# Sqoop
+# Notes
 
 **host-:** cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com
 **username-:**    cdb22dw011
