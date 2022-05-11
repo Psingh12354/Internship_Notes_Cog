@@ -229,3 +229,13 @@ marks int,
 email string) 
 clustered by(course) into 6 buckets stored as textfile;
 ```
+
+
+## Apache Hbase
+
+### Here we use nosql database which is non-tabular database because now a days data originate in multiple format
+
+**HBase is a column-oriented non-relational database management system that runs on top of Hadoop Distributed File System (HDFS). HBase provides a fault-tolerant way of storing sparse data sets, which are common in many big data use cases.**
+
+### NOSQL
+**NoSQL is used for Big data and real-time web apps. For example, companies like Twitter, Facebook and Google collect terabytes of user data every single day. NoSQL database stands for “Not Only SQL” or “Not SQL.” Though a better term would be “NoREL”, NoSQL caught on. Carl Strozz introduced the NoSQL concept in 1998**
