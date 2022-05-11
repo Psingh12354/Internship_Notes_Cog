@@ -1,5 +1,7 @@
 # Notes
 
+## Sqoop
+
 **host-:** cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com
 **username-:**    cdb22dw011
 **Password-:**  Welcome!12345
@@ -51,7 +53,7 @@ sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com/test --username cdb22dw011 -P --table customer --incremental append --check-column cust_id --last-value 115 --target-dir /customer
 ```
 
-### Hive related stuffs
+## Hive related stuffs
 ```
 cp /home/ubh01/apache-hive-2.3.2-bin/lib/hive-common-2.3.2.jar /home/ubh01/sqoop-1.4.7.bin__hadoop-2.6.0/lib/
 ```
@@ -112,7 +114,7 @@ hive> load data inpath '/StudentData1' overwrite into table priyanshu;
 ```
 hive>  select count (*) from tablename;
 ```
-### Notes shared
+### Notes shared by sir
 ```
 hive> create table priyanshu(
 age int,
