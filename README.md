@@ -246,6 +246,59 @@ clustered by(course) into 6 buckets stored as textfile;
 >> start-hbase.sh
 >> hbase shell
 ```
+
+### Table_help
+```
+hbase(main):008:0> table_help
+Help for table-reference commands.
+
+You can either create a table via 'create' and then manipulate the table via commands like 'put', 'get', etc.
+See the standard help information for how to use each of these commands.
+
+However, as of 0.96, you can also get a reference to a table, on which you can invoke commands.
+For instance, you can get create a table and keep around a reference to it via:
+
+   hbase> t = create 't', 'cf'
+
+Or, if you have already created the table, you can get a reference to it:
+
+   hbase> t = get_table 't'
+
+You can do things like call 'put' on the table:
+
+  hbase> t.put 'r', 'cf:q', 'v'
+
+which puts a row 'r' with column family 'cf', qualifier 'q' and value 'v' into table t.
+
+To read the data out, you can scan the table:
+
+  hbase> t.scan
+
+which will read all the rows in table 't'.
+
+Essentially, any command that takes a table name can also be done via table reference.
+Other commands include things like: get, delete, deleteall,
+get_all_columns, get_counter, count, incr. These functions, along with
+the standard JRuby object methods are also available via tab completion.
+
+For more information on how to use each of these commands, you can also just type:
+
+   hbase> t.help 'scan'
+
+which will output more information on how to use that command.
+
+You can also do general admin actions directly on a table; things like enable, disable,
+flush and drop just by typing:
+
+   hbase> t.enable
+   hbase> t.flush
+   hbase> t.disable
+   hbase> t.drop
+
+Note that after dropping a table, your reference to it becomes useless and further usage
+is undefined (and not recommended).
+
+```
 ### Command to test
 ```
 >> status
@@ -254,5 +307,18 @@ clustered by(course) into 6 buckets stored as textfile;
 >> table_help
 ```
 
+### list to get the list of table numbers
+```
+>> list
+```
+### Create table sc-tb1 is table name while tb1 is the table 1 and cf1 means column family
+```
+>> create 'sc-tb1' , 'tb1-cf1'
+```
+
+### if you have already created the table, you can get a reference to it
+```
+>> get_table 'sc-tb1'
+```
 
 
