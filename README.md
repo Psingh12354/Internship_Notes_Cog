@@ -239,3 +239,14 @@ clustered by(course) into 6 buckets stored as textfile;
 
 ### NOSQL
 **NoSQL is used for Big data and real-time web apps. For example, companies like Twitter, Facebook and Google collect terabytes of user data every single day. NoSQL database stands for “Not Only SQL” or “Not SQL.” Though a better term would be “NoREL”, NoSQL caught on. Carl Strozz introduced the NoSQL concept in 1998**
+
+### Command to start
+```
+>> cd $HBASE_HOME/bin/
+>> start-hbase.sh
+>>  hbase shell
+```
+
+
+
+
