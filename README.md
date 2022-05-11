@@ -244,9 +244,15 @@ clustered by(course) into 6 buckets stored as textfile;
 ```
 >> cd $HBASE_HOME/bin/
 >> start-hbase.sh
->>  hbase shell
+>> hbase shell
 ```
-
+### Command to test
+```
+>> status
+>> version
+>> whoami
+>> table_help
+```
 
 
 
