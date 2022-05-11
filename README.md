@@ -231,7 +231,7 @@ clustered by(course) into 6 buckets stored as textfile;
 ```
 
 
-# Apache Hbase
+# Apache Hbase [refer](https://www.tutorialspoint.com/hbase/hbase_create_table.htm)
 
 ### Here we use nosql database which is non-tabular database because now a days data originate in multiple format
 
