@@ -321,4 +321,7 @@ is undefined (and not recommended).
 >> get_table 'sc-tb1'
 ```
 
-
+# Apache Kafka 
+```
+>> cd $KAFKA_HOME
+>> 
