@@ -321,7 +321,8 @@ is undefined (and not recommended).
 >> get_table 'sc-tb1'
 ```
 
-# Apache Kafka 
+# Apache Kafka [referal](https://kafka.apache.org/quickstart)
 ```
 >> cd $KAFKA_HOME
->> 
+>> follow the referal
+```
