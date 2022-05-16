@@ -1,7 +1,7 @@
 # Notes
 
-Hadoop marreduce local disk answer search local in find [local](https://www.guru99.com/introduction-to-mapreduce.html)
-Apache Spark [spark](https://www.tutorialspoint.com/apache_spark/apache_spark_introduction.htm)
+- Hadoop marreduce local disk answer search local in find [local](https://www.guru99.com/introduction-to-mapreduce.html)
+- Apache Spark [spark](https://www.tutorialspoint.com/apache_spark/apache_spark_introduction.htm)
 
 # Sqoop
 
