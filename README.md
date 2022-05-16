@@ -1,5 +1,7 @@
 # Notes
 
+Hadoop marreduce local disk answer search local in find [local](https://www.guru99.com/introduction-to-mapreduce.html)
+
 # Sqoop
 
 **host-:** cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com
