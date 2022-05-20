@@ -334,6 +334,8 @@ is undefined (and not recommended).
 ```
 
 # Spark [Socket Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
+
+### File Stream
 ```
 >>  nano cdb.py
 import pyspark
@@ -376,3 +378,38 @@ ssc.awaitTermination()  # Wait for the computation to terminate
 write any message here and press enter
 ```
 
+### Socket Streaming
+```
+# Databricks notebook source
+# Picking up live data
+import pyspark
+from pyspark import SparkConf, SparkContext
+from pyspark.streaming import StreamingContext
+
+# COMMAND ----------
+
+conf = SparkConf().setAppName("File streaming")
+sc = SparkContext.getOrCreate(conf=conf)
+
+# COMMAND ----------
+
+# 10 sec streaming gap
+ssc = StreamingContext(sc,10)
+
+# COMMAND ----------
+
+rdd = ssc.textFileStream("/FileStore/tables/")
+
+# COMMAND ----------
+
+rdd = rdd.map(lambda x: (x,1))
+rdd = rdd.reduceByKey(lambda x,y: x+y)
+rdd.pprint()
+
+# COMMAND ----------
+
+# 100000 second till
+ssc.start()
+ssc.awaitTerminationOrTimeout(100000)
+
+```
