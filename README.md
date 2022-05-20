@@ -4,6 +4,7 @@
 - Apache Spark [spark](https://www.tutorialspoint.com/apache_spark/apache_spark_introduction.htm)
 - DAG & RDD [Architecture](https://www.javatpoint.com/apache-spark-architecture)
 - Spark Streaming [link](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
+- Spark Tutorial With Scala [link](https://supergloo.com/spark-tutorial/spark-tutorials-scala/)
 
 # Sqoop
 
