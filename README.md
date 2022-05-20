@@ -349,4 +349,5 @@ print(demo.collect())
 
 ```
 >> nc -lk 9999
+write any message here and press enter
 ```
