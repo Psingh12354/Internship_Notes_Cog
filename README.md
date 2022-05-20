@@ -333,7 +333,7 @@ is undefined (and not recommended).
 >> follow the referal
 ```
 
-# Spark
+# Spark [link](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 ```
 >>  nano cdb.py
 import pyspark
@@ -345,9 +345,10 @@ print(demo.collect())
 >>  spark-submit cdb.py
 
 ```
-### To run port on different terminal
+### To run port on different terminal 
 
 ```
 >> nc -lk 9999
 write any message here and press enter
 ```
+
