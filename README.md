@@ -342,6 +342,7 @@ con = SparkConf().setAppname("Read File")
 sc = SparkContext.getOrCreate()
 demo = sc.parallelize([1,2,3,4,5,6])
 print(demo.collect())
+# to run the code
 >>  spark-submit cdb.py
 
 ```
