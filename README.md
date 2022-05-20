@@ -332,3 +332,16 @@ is undefined (and not recommended).
 >> cd $KAFKA_HOME
 >> follow the referal
 ```
+
+# Spark
+```
+>>  nano cdb.py
+import pyspark
+from pyspark import SparkConf, SparkContext
+con = SparkConf().setAppname("Read File")
+sc = SparkContext.getOrCreate()
+demo = sc.parallelize([1,2,3,4,5,6])
+print(demo.collect())
+>>  spark-submit cdb.py
+
+```
