@@ -333,7 +333,7 @@ is undefined (and not recommended).
 >> follow the referal
 ```
 
-# Spark [link](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
+# Spark [Socket Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 ```
 >>  nano cdb.py
 import pyspark
