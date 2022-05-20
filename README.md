@@ -345,3 +345,8 @@ print(demo.collect())
 >>  spark-submit cdb.py
 
 ```
+### To run port on different terminal
+
+```
+>> nc -lk 9999
+```
