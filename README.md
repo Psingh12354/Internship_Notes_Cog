@@ -460,3 +460,14 @@ pig
 ```
 pig -x mapreduce
 ```
+
+
+### Pig command
+```
+student = load '/home/ubh01/Desktop/StudentData.csv' using PigStorage(',') as (age: int, gender:chararray, name:chararray, course:chararray, roll:chararray, marks:int, email:chararray);
+```
+
+### Display the output
+```
+dump student
+```
