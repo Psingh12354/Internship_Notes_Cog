@@ -414,3 +414,49 @@ ssc.start()
 ssc.awaitTerminationOrTimeout(100000)
 
 ```
+
+# Pig
+
+### Download
+
+```
+>>  mkdir pig
+>>  cd pig/
+>>  wget https://downloads.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
+>>  tar -xvf pig-0.17.0.tar.gz
+>>  cd
+>>  nano .bashrc
+
+Add this in bottom of bachrc
+____________
+#JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+#Apache Pig Environment Variables
+export PIG_HOME=/home/hiberstack/pig/pig-0.17.0
+export PATH=$PATH:/home/hiberstack/pig/pig-0.17.0/bin
+export PIG_CLASSPATH=$HADOOP_HOME/conf
+____________
+# save ctrl + x and than Y
+
+>>  source .bashrc
+
+# to check
+>>  pig -version
+```
+
+### Start Apache Pig
+
+When we start Apache Pig, it opens a grunt shell. We can start Apache Pig in 2 execution modes as below
+
+**(a) Local Mode:** In Local mode, the execution of Pig commands will be performed on the local file system. Files will be read and written from and into the local file system only rather than HDFS. We can start Pig in Local Mode with the below command
+```
+pig -x local
+```
+**(b) MapReduce Mode:** In this mode, the Pig commands will be executed on the files present on HDFS. The file will be read from and written into HDFS. This is the default mode of Pig. We can start Pig in MapReduce Mode with the below commands
+```
+pig
+```
+**OR**
+```
+pig -x mapreduce
+```
