@@ -494,24 +494,26 @@ female = filter details by gender == 'Female';
 female = filter details by gender == 'Female' and age == 28;
 ```
 
-### order
+### order by
 ```
-    rollorder = order details by roll asc;
-    rollorder = order details by roll desc;
-    rollorder = order details by roll;
+rollorder = order details by roll asc;
+rollorder = order details by roll desc;
+rollorder = order details by roll;
 ```
 
-### schema
+### save the file
 ```
-    store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',');
+store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',');
+store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(':');
 
-    store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(':');
+# you can use the below command to load data without schema
 
-    store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',','-schema');
-
-    karthick = load '/home/ubh01/Desktop/rollorderkarthick/part-r-00000' using PigStorage(',');
- ```
-
+store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',','-schema');
+karthick = load '/home/ubh01/Desktop/rollorderkarthick/part-r-00000' using PigStorage(',');
+dump karthick
+```
+### To group the similar data
 ```
 grouped = GROUP student by course;
+dump grouped
 ```
