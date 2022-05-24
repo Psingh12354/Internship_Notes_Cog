@@ -470,7 +470,7 @@ pig -x mapreduce
 ```
 
 
-### Pig command
+### Pig commands load
 ```
 student = load '/home/ubh01/Desktop/StudentData.csv' using PigStorage(',') as (age: int, gender:chararray, name:chararray, course:chararray, roll:chararray, marks:int, email:chararray);
 ```
@@ -482,8 +482,10 @@ dump student
 ### for each
 ```
 details = foreach student generate roll,name,age,gender;
+# similar to select(roll,name,age,gender)
+dump details
 ```
-### Filter
+### Filter similar to where condition
 ```
 female = filter details by gender == 'Female';
 ```
