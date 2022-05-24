@@ -469,6 +469,13 @@ pig
 pig -x mapreduce
 ```
 
+## Complex type data type
+
+- **Map** ex-: ['name'#'bob', 'age'#55]
+- **Tuple** ex-: ('bob', 55)
+- **Bag** ex-: {('bob', 55), ('sally', 52), ('john', 25)}  
+- **Atoms** ex-: datatype like int, char, float and string etc.
+
 
 ### Pig commands load
 ```
