@@ -5,6 +5,7 @@
 - DAG & RDD [Architecture](https://www.javatpoint.com/apache-spark-architecture)
 - Spark Streaming [link](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 - Spark Tutorial With Scala [link](https://supergloo.com/spark-tutorial/spark-tutorials-scala/)
+- Pig Installation [link](https://hiberstack.com/install-apache-pig-in-ubuntu/)
 
 # Sqoop
 
