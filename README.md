@@ -475,3 +475,11 @@ dump student
 ```
 details = foreach student generate roll,name,age,gender;
 ```
+### Filter
+```
+female = filter details by gender == 'Female';
+```
+### with more than one condution
+```
+female = filter details by gender == 'Female' and age == 28;
+```
