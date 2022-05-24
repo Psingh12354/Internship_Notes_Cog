@@ -510,3 +510,6 @@ female = filter details by gender == 'Female' and age == 28;
     karthick = load '/home/ubh01/Desktop/rollorderkarthick/part-r-00000' using PigStorage(',');
  ```
 
+```
+grouped = GROUP student by course;
+```
