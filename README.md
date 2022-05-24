@@ -471,3 +471,7 @@ student = load '/home/ubh01/Desktop/StudentData.csv' using PigStorage(',') as (a
 ```
 dump student
 ```
+### for each
+```
+details = foreach student generate roll,name,age,gender;
+```
