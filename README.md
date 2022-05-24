@@ -491,3 +491,10 @@ female = filter details by gender == 'Female';
 ```
 female = filter details by gender == 'Female' and age == 28;
 ```
+
+### order
+```
+    rollorder = order details by roll asc;
+    rollorder = order details by roll desc;
+    rollorder = order details by roll;
+```
