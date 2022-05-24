@@ -477,50 +477,50 @@ pig -x mapreduce
 - **Atoms** ex-: datatype like int, char, float and string etc.
 
 
-### Pig commands load
+### Pig commands load in local dir
 ```
-student = load '/home/ubh01/Desktop/StudentData.csv' using PigStorage(',') as (age: int, gender:chararray, name:chararray, course:chararray, roll:chararray, marks:int, email:chararray);
+grunt>  student = load '/home/ubh01/Desktop/StudentData.csv' using PigStorage(',') as (age: int, gender:chararray, name:chararray, course:chararray, roll:chararray, marks:int, email:chararray);
 ```
 
 ### Display the output
 ```
-dump student
+grunt>  dump student
 ```
 ### for each
 ```
-details = foreach student generate roll,name,age,gender;
+grunt>  details = foreach student generate roll,name,age,gender;
 # similar to select(roll,name,age,gender)
-dump details
+grunt>  dump details
 ```
 ### Filter similar to where condition
 ```
-female = filter details by gender == 'Female';
+grunt>  female = filter details by gender == 'Female';
 ```
 ### with more than one condution
 ```
-female = filter details by gender == 'Female' and age == 28;
+grunt>  female = filter details by gender == 'Female' and age == 28;
 ```
 
 ### order by
 ```
-rollorder = order details by roll asc;
-rollorder = order details by roll desc;
-rollorder = order details by roll;
+grunt>  rollorder = order details by roll asc;
+grunt>  rollorder = order details by roll desc;
+grunt>  rollorder = order details by roll;
 ```
 
 ### save the file
 ```
-store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',');
-store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(':');
+grunt>  store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',');
+grunt>  store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(':');
 
 # you can use the below command to load data without schema
 
-store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',','-schema');
-karthick = load '/home/ubh01/Desktop/rollorderkarthick/part-r-00000' using PigStorage(',');
-dump karthick
+grunt>  store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',','-schema');
+grunt>  karthick = load '/home/ubh01/Desktop/rollorderkarthick/part-r-00000' using PigStorage(',');
+grunt>  dump karthick
 ```
 ### To group the similar data
 ```
-grouped = GROUP student by course;
-dump grouped
+grunt>  grouped = GROUP student by course;
+grunt>  dump grouped
 ```
