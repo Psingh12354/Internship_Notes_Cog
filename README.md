@@ -498,3 +498,15 @@ female = filter details by gender == 'Female' and age == 28;
     rollorder = order details by roll desc;
     rollorder = order details by roll;
 ```
+
+### Pig
+```
+    store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',');
+
+    store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(':');
+
+    store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',','-schema');
+
+    karthick = load '/home/ubh01/Desktop/rollorderkarthick/part-r-00000' using PigStorage(',');
+ ```
+
