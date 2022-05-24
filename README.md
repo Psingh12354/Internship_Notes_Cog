@@ -499,7 +499,7 @@ female = filter details by gender == 'Female' and age == 28;
     rollorder = order details by roll;
 ```
 
-### Pig
+### schema
 ```
     store rollorder into '/home/ubh01/Desktop/rollorderkarthick' using PigStorage(',');
 
