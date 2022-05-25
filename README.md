@@ -525,3 +525,18 @@ grunt>  dump karthick
 grunt>  grouped = GROUP student by course;
 grunt>  dump grouped
 ```
+
+# Apache Flume
+### Code
+```
+#!/bin/bash
+rm logfile.log
+i=0
+while :
+do
+    echo "Hadoop in Real World Developer $i" >> logfile.log
+    i=`expr $i + 1`
+    echo "sleeping for 5 seconds..."
+    sleep 5
+done
+```
