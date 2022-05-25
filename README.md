@@ -575,5 +575,13 @@ agent.channels.memory-channel.type = memory
 ```
 ### Command to start
 ```
-flume-ng agent --conf /home/ubh01/flume/simple/ -f /home/ubh01/flume/simple/simple-flume.conf -Dflume.root.logger=DEBUG,console -n agent
+>>  flume-ng agent --conf /home/ubh01/flume/simple/ -f /home/ubh01/Desktop/simple/simple-flume.conf -Dflume.root.logger=DEBUG,console -n agent
+
 ```
+
+### To check wheather done or not check hdfs it create a folder with name flume in hdfs
+```
+>> hadoop fs -ls /
+and to print
+>> hadoop fs -cat /flume/simple/FlumeData.1653455264626
+
