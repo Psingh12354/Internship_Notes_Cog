@@ -527,7 +527,7 @@ grunt>  dump grouped
 ```
 
 # Apache Flume
-### Code write
+### Code (write.sh) and Hadoop daemons running
 ```
 # file name write.sh
 #!/bin/bash
@@ -541,7 +541,39 @@ do
     sleep 5
 done
 ```
-### To run on seprate term
+
+### Configuration file
+```
+# Flume Components
+agent.sources = tail-source
+agent.sinks = hdfs-sink
+agent.channels = memory-channel
+
+ 
+
+# Source
+agent.sources.tail-source.type = exec
+agent.sources.tail-source.command = tail -F logfile.log
+agent.sources.tail-source.channels = memory-channel
+
+ 
+
+# Define a sink that outputs to local file.
+agent.sinks.hdfs-sink.type = hdfs
+agent.sinks.hdfs-sink.hdfs.path = /flume/simple
+agent.sinks.hdfs-sink.hdfs.fileType = DataStream
+agent.sinks.hdfs-sink.channel = memory-channel
+
+ 
+
+# Channels
+agent.channels.memory-channel.type = memory
+```
+### To run on seprate term If you run this you get a log file
 ```
 >> sh write.sh
+```
+### Command to start
+```
+flume-ng agent --conf /home/ubh01/flume/simple/ -f /home/ubh01/flume/simple/simple-flume.conf -Dflume.root.logger=DEBUG,console -n agent
 ```
