@@ -527,8 +527,9 @@ grunt>  dump grouped
 ```
 
 # Apache Flume
-### Code
+### Code write
 ```
+# file name write.sh
 #!/bin/bash
 rm logfile.log
 i=0
@@ -539,4 +540,8 @@ do
     echo "sleeping for 5 seconds..."
     sleep 5
 done
+```
+### To run on seprate term
+```
+>> sh write.sh
 ```
