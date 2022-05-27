@@ -1,5 +1,6 @@
 # Notes
 
+- Hadoop Theory [link](https://www.edureka.co/blog/hadoop-ecosystem)
 - Hadoop marreduce local disk answer search local in find [local](https://www.guru99.com/introduction-to-mapreduce.html)
 - Apache Spark [spark](https://www.tutorialspoint.com/apache_spark/apache_spark_introduction.htm)
 - DAG & RDD [Architecture](https://www.javatpoint.com/apache-spark-architecture)
