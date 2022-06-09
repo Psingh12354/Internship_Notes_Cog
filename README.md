@@ -9,6 +9,7 @@
 - Spark Tutorial With Scala [link](https://supergloo.com/spark-tutorial/spark-tutorials-scala/)
 - Pig Installation [link](https://hiberstack.com/install-apache-pig-in-ubuntu/)
 - Flume Installation [link](https://data-flair.training/blogs/apache-flume-installation-tutorial/)
+- Hive internal vs external [link](https://geeksforgeeks.org/difference-between-hive-internal-and-external-tables/)
 
 # Sqoop
 
@@ -105,6 +106,11 @@ sqoop-export --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 ```
 hive> ALTER TABLE tablename
 SET TBLPROPERTIES ("skip.header.line.count"="1");
+```
+### To know types of tables
+```
+// if given managed table than it is internal table
+hive>  describe extended test;
 ```
 ### Creat table internal by default
 ```
