@@ -229,15 +229,7 @@ marks int,
 email string) 
 clustered by(age) into 2 buckets stored as textfile;
 
-create table priyanshu_buck(
-age int,
-gender string,
-name string,
-course string,
-roll int,
-marks int,
-email string) 
-clustered by(age) into 2 buckets stored as textfile;
+// 2 buckets means mod by 2 example in above student database we have 2 age 28,29 28%2=0 while 29%2=1 so according to this it will divide
 
 insert into priyanshu_buck select * from priyanshu;
 
