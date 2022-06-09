@@ -126,6 +126,11 @@ hive>  create external table priyanshu(age int, gender string,name string,roll i
 hive> load data inpath '/StudentData1' overwrite into table priyanshu;
 
 ```
+### Describe schema
+```
+hive> describe tablename;
+```
+
 ### count total number of row
 ```
 hive>  select count (*) from tablename;
