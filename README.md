@@ -10,6 +10,7 @@
 - Pig Installation [link](https://hiberstack.com/install-apache-pig-in-ubuntu/)
 - Flume Installation [link](https://data-flair.training/blogs/apache-flume-installation-tutorial/)
 - Hive internal vs external [link](https://geeksforgeeks.org/difference-between-hive-internal-and-external-tables/)
+- Bucketing [link](https://www.javatpoint.com/bucketing-in-hive)
 
 # Sqoop
 
