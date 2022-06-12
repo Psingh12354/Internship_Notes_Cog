@@ -19,6 +19,20 @@ Data classified in three types
 - **Semi-structured-:** XMl, Json ,HTML
 - **Unstructured-:** Word, PDF, Text
 
+In Mrv1 there is some problem related to job tracker so we go form mrv2 with yarn
+
+Types of Nodes
+- **Name Node(Master)-:** Stores meta data like name, address required less computation power 
+- **Data Node(Slave)-:** Store the physical data required more computation
+- **Secondary Name Node-:** Use for checkpoint operation
+- **Resource Manager(Master Yarn MRV2)-:** Manage the resources and handles the cliend request(map reduce)
+- **Node Manager(Slave Yarn MRV@)-:** Perform the operation allocated by resource manager
+
+### Some Key points
+- Hadoop is not good to handle small files so we go for sequential file that is the collection of block files 
+- to run java program in python use **AVRO**
+- 
+
 # Sqoop
 
 ### load file from mysql to vm hdfs
@@ -69,6 +83,14 @@ sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 ```
 
 # Hive 
+- Tabular form
+- developed by facebook
+- no indexing
+
+Two types of tables
+- **Managed table-:** use when only hive having full control over data like if droped table it will remove all data by dedfaul table is managed or internal
+- **External table-:** In this it doesn't have full control over the data use External to define external
+
 ```
 cp /home/ubh01/apache-hive-2.3.2-bin/lib/hive-common-2.3.2.jar /home/ubh01/sqoop-1.4.7.bin__hadoop-2.6.0/lib/
 ```
@@ -349,6 +371,12 @@ is undefined (and not recommended).
 - handle 100mb r/w data per second
 - immutable
 - compress msg in batches
+- Developed by linkedin
+- focused on consumer and producer as dull
+- 160000 msg per sec
+- real time msg feed
+- zookeper is use to check wheather the node is alive or not 
+- without zookeper it's a kraft mode
 
 # Spark [Socket Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 
@@ -432,6 +460,12 @@ ssc.awaitTerminationOrTimeout(100000)
 ```
 
 # Pig
+
+- Developed by yahoo
+- convert set of instruction to map reduce job
+- to visualize data we can go with pig
+- own lang that is pig latin
+- prefered for ETL related stuffs
 
 ### Download
 
@@ -542,6 +576,12 @@ grunt>  dump grouped
 ```
 
 # Apache Flume
+- Streaming of data
+
+Consist of three things-: 
+- **Source-:** which convert input to flume event
+- **channel-:** through which mgs passed
+- **Sink-:** Destination like hdfs or local file system
 ### Code (write.sh) and Hadoop daemons running
 ```
 # file name write.sh
@@ -599,4 +639,9 @@ agent.channels.memory-channel.type = memory
 >> hadoop fs -ls /
 and to print
 >> hadoop fs -cat /flume/simple/FlumeData.1653455264626
+```
 
+
+
+# Combiner 
+![](https://static.packt-cdn.com/products/9781783285471/graphics/5471OS_01_06.jpg)
