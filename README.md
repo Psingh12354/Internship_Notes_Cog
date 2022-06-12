@@ -12,11 +12,14 @@
 - Hive internal vs external [link](https://geeksforgeeks.org/difference-between-hive-internal-and-external-tables/)
 - Bucketing [link](https://www.javatpoint.com/bucketing-in-hive)
 
-# Sqoop
+# Big data
 
-**host-:** cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazonaws.com
-**username-:**    cdb22dw011
-**Password-:**  Welcome!12345
+Data classified in three types
+- **Structured-:**  RDBMS(dates, phone no)
+- **Semi-structured-:** XMl, Json ,HTML
+- **Unstructured-:** Word, PDF, Text
+
+# Sqoop
 
 ### load file from mysql to vm hdfs
 -m 1 for primary key if it consist of primary key no need to use primary key provide distributed architecture
@@ -334,12 +337,18 @@ is undefined (and not recommended).
 ```
 >> get_table 'sc-tb1'
 ```
+- Hbase follow column oriented architecture
+- It follow consistency and partion while droping the availabilty which is being handle by hdfs
+- focused on unstructured data
 
 # Apache Kafka [referal](https://kafka.apache.org/quickstart)
 ```
 >> cd $KAFKA_HOME
 >> follow the referal
 ```
+- handle 100mb r/w data per second
+- immutable
+- compress msg in batches
 
 # Spark [Socket Streaming](https://spark.apache.org/docs/latest/streaming-programming-guide.html)
 
