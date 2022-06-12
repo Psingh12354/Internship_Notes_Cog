@@ -645,3 +645,10 @@ and to print
 
 # Combiner 
 ![](https://static.packt-cdn.com/products/9781783285471/graphics/5471OS_01_06.jpg)
+
+# Apache Nifi [link](https://www.tutorialspoint.com/apache_nifi/apache_nifi_introduction.htm)
+- Apache NiFi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. It supports a wide variety of data formats like logs, geo location data, social feeds, etc. It also supports many protocols like SFTP, HDFS, and KAFKA, etc. This support to wide variety of data sources and protocols making this platform popular in many IT organizations.
+- Provide a web based user Interface
+- Drag and Drop
+- Flowfiles = Content + attribute(kv pair) 
+- Flowfiles use by nifi processor to process the data
