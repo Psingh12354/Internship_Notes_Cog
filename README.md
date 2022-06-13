@@ -29,6 +29,7 @@ DataBase = DB Engine + Data Storage
 - hadoop fs -ls / # fs stands of file system while */* absolute path
 - hdfs dfs -ls / # dfs stands for distributed file system 
 - hadoop use local storage in intermediate processes because hdfs create replicatin while local storage doesn't   
+- load data inpath command is use to load data into hive table. 'LOCAL' signifies that the input file is on the local file system. If 'LOCAL' is omitted then it looks for the file in HDFS. **load data inpath '/directory-path/file. csv' into mytable;** and **load data local inpath '/local-directory-path/file into mytable;**
 
 Data classified in three types
 - **Structured-:**  RDBMS(dates, phone no)
@@ -110,12 +111,7 @@ sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 - Use for datawarehousing
 - All failure goes to mapreduce
 
-| DataBase | DataWarehousing |
-| --- | --- | --- |
-| To recored | To analyze | 
-| OLTP(Online transcation processing) | OLAP(Analytical processing) |
-| Normalized | Denormalized | 
-| Data size less | Data size high |
+![OLAP VS OLTP](https://assets.website-files.com/5e6f9b297ef3941db2593ba1/6137483407a88785f4860f82_Screenshot%202021-09-07%20at%2013.08.02.png)
 
 Two types of tables
 - **Managed table-:** use when only hive having full control over data like if droped table it will remove all data by dedfaul table is managed or internal
