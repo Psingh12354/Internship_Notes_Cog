@@ -214,7 +214,11 @@ hive> load data local inpath '/home/ubh01/Desktop/StudentData.csv' overwrite int
 ============================
 ```
 
-### Partiton two type static and 
+### Partiton two type static and dynamic
+- Partion make query response time faster
+- Dynamic partion consume more time comparerd to static partion
+
+![Stat vs Dyna](https://i0.wp.com/i.postimg.cc/mrvV2RBd/h66.png?w=810&ssl=1)
 ```
 insert into table dummy select * from karthick;
 ```
@@ -298,12 +302,20 @@ clustered by(course) into 6 buckets stored as textfile;
 
 # Apache Hbase [refer](https://www.tutorialspoint.com/hbase/hbase_create_table.htm)
 
+### NOSQL
+**NoSQL is used for Big data and real-time web apps. For example, companies like Twitter, Facebook and Google collect terabytes of user data every single day. NoSQL database stands for “Not Only SQL” or “Not SQL.” Though a better term would be “NoREL”, NoSQL caught on. Carl Strozz introduced the NoSQL concept in 1998** 
+
+- **NOSQL** follow CAP properties consistency, Availability and Partitioning
+- **Consistency-:** Same data visible to all in any circumstances
+- **Availability-:** Even if node failure data is available
+- **Partioning-:** Maintain the work even in case of n/w failure
+
 ### Here we use nosql database which is non-tabular database because now a days data originate in multiple format
 
 **HBase is a column-oriented non-relational database management system that runs on top of Hadoop Distributed File System (HDFS). HBase provides a fault-tolerant way of storing sparse data sets, which are common in many big data use cases.**
 
-### NOSQL
-**NoSQL is used for Big data and real-time web apps. For example, companies like Twitter, Facebook and Google collect terabytes of user data every single day. NoSQL database stands for “Not Only SQL” or “Not SQL.” Though a better term would be “NoREL”, NoSQL caught on. Carl Strozz introduced the NoSQL concept in 1998**
+- **HBase** required 2 things only CP consistency and partioning third one handle by HDFS
+
 
 ### Command to start
 ```
