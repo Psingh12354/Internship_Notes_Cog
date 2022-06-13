@@ -14,6 +14,12 @@
 
 # Big data
 
+DataBase = DB Engine + Data Storage
+
+- MySql default size is 256TB or 2^8
+- MySql at peak 65,536TB or 2^16
+- Mapreduce doesn't deals with local HDFS
+
 Data classified in three types
 - **Structured-:**  RDBMS(dates, phone no)
 - **Semi-structured-:** XMl, Json ,HTML
@@ -31,7 +37,10 @@ Types of Nodes
 ### Some Key points
 - Hadoop is not good to handle small files so we go for sequential file that is the collection of block files 
 - to run java program in python use **AVRO**
-- 
+
+# Yarn
+![Architecture-1](https://www.oreilly.com/library/view/hadoop-the-definitive/9781491901687/images/hddg_0401.png)
+![Architecture-2](https://media.geeksforgeeks.org/wp-content/uploads/HadoopYarn.jpg)
 
 # Sqoop
 
