@@ -110,8 +110,8 @@ sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 - Use for datawarehousing
 - All failure goes to mapreduce
 
-| **DataBase** | **Data warehousing**|
-| :----------------------------------------- | :-------------------------: | :---------------------------------: |
+| DataBase | DataWarehousing |
+| --- | --- | --- |
 | To recored | To analyze | 
 | OLTP(Online transcation processing) | OLAP(Analytical processing) |
 | Normalized | Denormalized | 
