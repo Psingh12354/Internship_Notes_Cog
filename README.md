@@ -20,7 +20,14 @@ DataBase = DB Engine + Data Storage
 - MySql at peak 65,536TB or 2^16
 - Mapreduce doesn't deals with local HDFS
 - **JPS** stands for java process status
-- To change block size go to hdfs-site.xml
+- To change block size go to _hdfs-site.xml_
+- Replication factor can be change in _core-site.xml_
+- 512 mb means 4 block and if 514 mb is consumed so it will take only 2mb extra not the 128mb complete advantage
+- Rack failure is not very common while block failure is
+- Rack with minumun latency will select as original while 2nd most latenct and 3rd most is rep2 and rep3
+- hadoop fs -ls / # fs stands of file system while */* absolute path
+- hdfs dfs -ls / # dfs stands for distributed file system 
+- hadoop use local storage in intermediate processes because hdfs create replicatin while local storage doesn't   
 
 Data classified in three types
 - **Structured-:**  RDBMS(dates, phone no)
@@ -30,7 +37,7 @@ Data classified in three types
 In Mrv1 there is some problem related to job tracker so we go form mrv2 with yarn
 
 Types of Nodes
-- **Name Node(Master HDFS)-:** Stores meta data like name, address required less computation power 
+- **Name Node(Master HDFS)-:** Stores meta data like name, address required less computation power also handle replication factor
 - **Data Node(Slave HDFS)-:** Store the physical data required more computation
 - **Secondary Name Node-:** Use for checkpoint operation
 - **Resource Manager(Master Yarn MRV2)-:** Manage the resources allocate from container where physical drives are present and handles the cliend request(map reduce)
