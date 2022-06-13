@@ -19,6 +19,8 @@ DataBase = DB Engine + Data Storage
 - MySql default size is 256TB or 2^8
 - MySql at peak 65,536TB or 2^16
 - Mapreduce doesn't deals with local HDFS
+- **JPS** stands for java process status
+- To change block size go to hdfs-site.xml
 
 Data classified in three types
 - **Structured-:**  RDBMS(dates, phone no)
@@ -28,11 +30,13 @@ Data classified in three types
 In Mrv1 there is some problem related to job tracker so we go form mrv2 with yarn
 
 Types of Nodes
-- **Name Node(Master)-:** Stores meta data like name, address required less computation power 
-- **Data Node(Slave)-:** Store the physical data required more computation
+- **Name Node(Master HDFS)-:** Stores meta data like name, address required less computation power 
+- **Data Node(Slave HDFS)-:** Store the physical data required more computation
 - **Secondary Name Node-:** Use for checkpoint operation
-- **Resource Manager(Master Yarn MRV2)-:** Manage the resources and handles the cliend request(map reduce)
+- **Resource Manager(Master Yarn MRV2)-:** Manage the resources allocate from container where physical drives are present and handles the cliend request(map reduce)
 - **Node Manager(Slave Yarn MRV@)-:** Perform the operation allocated by resource manager
+- **Job Tracker(Master Mapreduce)-:** the service within Hadoop that is responsible for taking client requests
+- **Task Tracker(Slave Mapreduce)-:** A TaskTracker is a node in the cluster that accepts tasks - Map, Reduce and Shuffle operations - from a JobTracker.
 
 ### Some Key points
 - Hadoop is not good to handle small files so we go for sequential file that is the collection of block files 
