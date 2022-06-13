@@ -11,6 +11,7 @@
 - Flume Installation [link](https://data-flair.training/blogs/apache-flume-installation-tutorial/)
 - Hive internal vs external [link](https://geeksforgeeks.org/difference-between-hive-internal-and-external-tables/)
 - Bucketing [link](https://www.javatpoint.com/bucketing-in-hive)
+- If mapreduce take 3tb of data it give 3tb data only not 3x3TB
 
 # Big data
 
@@ -106,6 +107,15 @@ sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 - Tabular form
 - developed by facebook
 - no indexing
+- Use for datawarehousing
+- All failure goes to mapreduce
+
+| **DataBase** | **Data warehousing**|
+| :----------------------------------------- | :-------------------------: | :---------------------------------: |
+| To recored | To analyze | 
+| OLTP(Online transcation processing) | OLAP(Analytical processing) |
+| Normalized | Denormalized | 
+| Data size less | Data size high |
 
 Two types of tables
 - **Managed table-:** use when only hive having full control over data like if droped table it will remove all data by dedfaul table is managed or internal
