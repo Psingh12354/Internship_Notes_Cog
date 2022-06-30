@@ -1,5 +1,7 @@
 # Notes
 
+## Site link
+
 - Hadoop Theory [link](https://www.edureka.co/blog/hadoop-ecosystem)
 - Yarn [link](https://www.geeksforgeeks.org/hadoop-yarn-architecture/)
 - Hadoop marreduce local disk answer search local in find [local](https://www.guru99.com/introduction-to-mapreduce.html)
@@ -13,6 +15,17 @@
 - Bucketing [link](https://www.javatpoint.com/bucketing-in-hive)
 - If mapreduce take 3tb of data it give 3tb data only not 3x3TB
 
+## Github support link
+
+- Mini_Project [link](https://github.com/Psingh12354/Mini-Project)
+- Pyspark [link](https://github.com/Psingh12354/Pyspark)
+- Hbase [link](https://github.com/Psingh12354/Hbase)
+- Case Study [link](https://github.com/Psingh12354/Case-Study)
+- Hadoop rough C [link](https://github.com/Psingh12354/Hadoop-Rough)
+- Python classes [link](https://github.com/Psingh12354/Python-Classes)
+- Kafka [link](https://github.com/Psingh12354/ApacheKafka)
+- Spark [link](https://github.com/Psingh12354/ApacheSpark)
+- Scala [link](https://github.com/Psingh12354/Scala)
 # Big data
 
 DataBase = DB Engine + Data Storage
