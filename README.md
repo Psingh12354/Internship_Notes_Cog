@@ -56,7 +56,7 @@ Types of Nodes
 - **Data Node(Slave HDFS)-:** Store the physical data required more computation
 - **Secondary Name Node-:** Use for checkpoint operation
 - **Resource Manager(Master Yarn MRV2)-:** Manage the resources allocate from container where physical drives are present and handles the cliend request(map reduce)
-- **Node Manager(Slave Yarn MRV@)-:** Perform the operation allocated by resource manager
+- **Node Manager(Slave Yarn MRV2)-:** Perform the operation allocated by resource manager
 - **Job Tracker(Master Mapreduce)-:** the service within Hadoop that is responsible for taking client requests
 - **Task Tracker(Slave Mapreduce)-:** A TaskTracker is a node in the cluster that accepts tasks - Map, Reduce and Shuffle operations - from a JobTracker.
 
