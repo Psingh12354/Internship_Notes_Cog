@@ -516,7 +516,7 @@ ssc.awaitTerminationOrTimeout(100000)
 - convert set of instruction to map reduce job
 - to visualize data we can go with pig
 - own lang that is pig latin
-- prefered for ETL related stuffs
+- prefered for ETL related stuffs(Pig Latin is one of the best scripting language to support the ETL process. It shows how to extract huge amount of data from a data source, transform the data so as to perform querying and also do the analysis jobs, and store back the end resultant data set onto a target destination database)
 
 ### Download
 
