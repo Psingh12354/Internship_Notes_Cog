@@ -703,3 +703,4 @@ and to print
 - Drag and Drop
 - Flowfiles = Content + attribute(kv pair) 
 - Flowfiles use by nifi processor to process the data
+- Data ingestion is the process of transporting data from one or more sources to a target site for further processing and analysis.
