@@ -15,6 +15,7 @@
 - Bucketing [link](https://www.javatpoint.com/bucketing-in-hive)
 - If mapreduce take 3tb of data it give 3tb data only not 3x3TB
 - DDL,DML,DCL [link](https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/)
+- Squoop [link](https://www.javatpoint.com/what-is-sqoop)
 
 ## Github support link
 
