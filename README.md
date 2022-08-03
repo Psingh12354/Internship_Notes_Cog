@@ -522,6 +522,7 @@ ssc.awaitTerminationOrTimeout(100000)
 - PIG has two parts: Pig Latin, the language and the pig runtime, for the execution environment. You can better understand it as Java and JVM
 - **10 line of pig latin = approx. 200 lines of Map-Reduce Java code**
 - prefered for ETL related stuffs(Pig Latin is one of the best scripting language to support the ETL process. It shows how to extract huge amount of data from a data source, transform the data so as to perform querying and also do the analysis jobs, and store back the end resultant data set onto a target destination database)
+- In PIG, first the load command, loads the data. Then we perform various functions on it like grouping, filtering, joining, sorting, etc. At last, either you can dump the data on the screen or you can store the result back in HDFS.
 
 ### Download
 
