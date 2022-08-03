@@ -43,6 +43,7 @@ DataBase = DB Engine + Data Storage
 - hdfs dfs -ls / # dfs stands for distributed file system 
 - hadoop use local storage in intermediate processes because hdfs create replicatin while local storage doesn't   
 - load data inpath command is use to load data into hive table. 'LOCAL' signifies that the input file is on the local file system. If 'LOCAL' is omitted then it looks for the file in HDFS. **load data inpath '/directory-path/file. csv' into mytable;** and **load data local inpath '/local-directory-path/file into mytable;**
+- ETL stands for Extract, Transform and Load. The ETL process typically extracts data from the source / transactional systems, transforms it to fit the model of data warehouse and finally loads it to the data warehouse.
 
 Data classified in three types
 - **Structured-:**  RDBMS(dates, phone no)
@@ -123,6 +124,7 @@ sqoop-import --connect jdbc:mysql://cdb22dw011.c0lf9xyp8cv9.ap-south-1.rds.amazo
 - no indexing
 - Use for datawarehousing
 - All failure goes to mapreduce
+- Hive is a powerful tool for ETL, data warehousing for Hadoop, and a database for Hadoop. It is, however, relatively slow compared with traditional databases. It doesn't offer all the same SQL features or even the same database features as traditional databases.
 
 ![OLAP VS OLTP](https://assets.website-files.com/5e6f9b297ef3941db2593ba1/6137483407a88785f4860f82_Screenshot%202021-09-07%20at%2013.08.02.png)
 
@@ -701,6 +703,8 @@ and to print
 - Apache NiFi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. It supports a wide variety of data formats like logs, geo location data, social feeds, etc. It also supports many protocols like SFTP, HDFS, and KAFKA, etc. This support to wide variety of data sources and protocols making this platform popular in many IT organizations.
 - Provide a web based user Interface
 - Drag and Drop
+- Data ingestion is the process of obtaining and importing data for immediate use or storage in a database.
 - Flowfiles = Content + attribute(kv pair) 
 - Flowfiles use by nifi processor to process the data
 - Data ingestion is the process of transporting data from one or more sources to a target site for further processing and analysis.
+- Apache NiFi is an ETL tool with flow-based programming that comes with a web UI built to provide an easy way (drag & drop) to handle data flow in real-time. It also supports powerful and scalable means of data routing and transformation, which can be run on a single server or in a clustered mode across many servers.
