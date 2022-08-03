@@ -14,6 +14,7 @@
 - Hive internal vs external [link](https://geeksforgeeks.org/difference-between-hive-internal-and-external-tables/)
 - Bucketing [link](https://www.javatpoint.com/bucketing-in-hive)
 - If mapreduce take 3tb of data it give 3tb data only not 3x3TB
+- DDL,DML,DCL [link](https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/)
 
 ## Github support link
 
