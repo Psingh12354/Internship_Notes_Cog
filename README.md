@@ -33,6 +33,7 @@ DataBase = DB Engine + Data Storage
 - MySql default size is 256TB or 2^8
 - MySql at peak 65,536TB or 2^16
 - Mapreduce doesn't deals with local HDFS
+- **Hadoop is a framework**
 - **JPS** stands for java process status
 - To change block size go to _hdfs-site.xml_
 - Replication factor can be change in _core-site.xml_
